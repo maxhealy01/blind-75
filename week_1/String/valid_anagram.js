@@ -27,15 +27,12 @@ const isAnagram = (s, t) => {
 		map[s[i]] ? map[s[i]]++ : (map[s[i]] = 1);
 	}
 
-	console.log(map);
-
 	// The sum of all #s in map will now equal the length of s
 	// The following loop works because it depends on the fact that this is a zero sum game
 	// because s.len === t.len
 	for (let i = 0; i < t.length; i++) {
 		if (map[t[i]]) map[t[i]]--;
 		else return false;
-		console.log(map);
 	}
 
 	return true;
