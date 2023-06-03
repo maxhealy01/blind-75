@@ -4,7 +4,7 @@ const search = (nums, target) => {
 
 	while (left <= right) {
 		let mid = Math.floor((right + left) / 2);
-		if (mid == target) {
+		if (nums[mid] == target) {
 			return mid;
 		} else if (nums[mid] < target) {
 			left = mid + 1;
