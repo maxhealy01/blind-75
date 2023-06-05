@@ -1,15 +1,15 @@
 // start on 0, loop through all, comparing value of j-i
 // compare this value to maxValue
 // then slide the window
-// var maxProfit = (prices) => {
-// 	let maxValue = 0;
-// 	for (i = 0; i < prices.length - 1; i++) {
-// 		for (j = i + 1; j < prices.length; j++) {
-// 			maxValue = Math.max(maxValue, prices[j] - prices[i]);
-// 		}
-// 	}
-// 	return maxValue;
-// };
+const max_profit = (prices) => {
+	let maxValue = 0;
+	for (i = 0; i < prices.length - 1; i++) {
+		for (j = i + 1; j < prices.length; j++) {
+			maxValue = Math.max(maxValue, prices[j] - prices[i]);
+		}
+	}
+	return maxValue;
+};
 
 // This is a better solution because here, we shrink the loop as we go.
 // We collect all the max profits, and if a lower number comes along further in the array,
@@ -36,4 +36,4 @@ const maxProfit = (prices) => {
 	return max_profit;
 };
 
-console.log(maxProfit([7, 1, 5, 3, 8, 4]));
+module.exports = { max_profit, maxProfit };

@@ -14,7 +14,7 @@
 // which causes the runtime to get pretty massive.
 // Maps are quicker to traverse because they store data in key:value pairs,
 // whereas arrays store data in order.
-var twoSum = function (nums, target) {
+const twoSum = (nums, target) => {
 	const map = new Map();
 	for (let i = 0; i < nums.length; i++) {
 		const complement = target - nums[i];
@@ -26,3 +26,5 @@ var twoSum = function (nums, target) {
 	return [];
 };
 console.log(twoSum([2, 7, 11, 15], 9));
+
+module.exports = twoSum;

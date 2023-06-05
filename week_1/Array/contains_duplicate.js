@@ -9,3 +9,5 @@ const containsDuplicate = (nums) => {
 	}
 	return false;
 };
+
+module.exports = containsDuplicate;
