@@ -63,4 +63,5 @@ const lengthOfLongestSubstring = (s) => {
 	return maxLength;
 };
 
-console.log(lengthOfLongestSubstring("abcddes"));
+module.exports = lengthOfLongestSubstring;
+console.log(lengthOfLongestSubstring("abcdasddades"));
