@@ -47,15 +47,4 @@ const longestPalindrome = (str) => {
 	return str.length > answer ? answer + 1 : answer;
 };
 
-console.log(
-	longestPalindrome(
-		"asdfiuhlfadsioufhadslkafdjhflkadsvvnoifdshavidGOIJFDJDGKJNGDKNFKSDJFNKoshfanvosdhnlasudhfnalsukdhfnalisuhdnoisduhfnvosiduhfgnv"
-	)
-);
-console.log(
-	longest_palindrome(
-		"asdfiuhlfadsioufhadslkafdjhflkadsvvnoifdshavidGOIJFDJDGKJNGDKNFKSDJFNKoshfanvosdhnlasudhfnalsukdhfnalisuhdnoisduhfnvosiduhfgnv"
-	)
-);
-
 module.exports = { longest_palindrome, longestPalindrome };
