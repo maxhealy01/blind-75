@@ -1,12 +1,14 @@
-var isPalindrome = function (s) {
+const isPalindrome = (str) => {
 	// Eliminate non-alphanumeric chars and make it lowercase
-	s = s.replace(/[^a-z0-9]/gi, "").toLowerCase();
+	str = str.replace(/[^a-z0-9]/gi, "").toLowerCase();
 
-	for (i = 0; i < Math.floor(s.length / 2); i++) {
-		if (s[i] !== s[s.length - 1 - i]) {
+	for (i = 0; i < Math.floor(str.length / 2); i++) {
+		if (str[i] !== str[str.length - 1 - i]) {
 			return false;
 		}
 	}
 
 	return true;
 };
+
+module.exports = isPalindrome;
