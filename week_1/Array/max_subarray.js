@@ -1,3 +1,4 @@
+// Given an integer array nums, find the subarray with the largest sum, and return its sum.
 const maxSubArray = (arr) => {
 	var prev = 0;
 	var max = -Infinity;
@@ -11,5 +12,4 @@ const maxSubArray = (arr) => {
 	return max;
 };
 
-console.log(maxSubArray([1, -2, 3, -5, 6, 7, 8, 0, 2, 55, 6, 7]));
 module.exports = maxSubArray;

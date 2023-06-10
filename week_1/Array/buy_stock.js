@@ -1,6 +1,8 @@
-// start on 0, loop through all, comparing value of j-i
-// compare this value to maxValue
-// then slide the window
+// You are given an array prices where prices[i] is the price of a given stock on the ith day.
+
+// You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
+
+// Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
 const max_profit = (prices) => {
 	let maxValue = 0;
 	for (i = 0; i < prices.length - 1; i++) {
@@ -19,19 +21,19 @@ const max_profit = (prices) => {
 // because we're always keeping track of which day would be the best to buy on
 // (ie, which [i] would be the most efficient)
 const maxProfit = (prices) => {
-	let left = 0; // Buy
-	let right = 1; // sell
+	let buy = 0; // Buy
+	let sell = 1; // sell
 	let max_profit = 0;
-	while (right < prices.length) {
-		if (prices[left] < prices[right]) {
-			let profit = prices[right] - prices[left]; // our current profit
+	while (sell < prices.length) {
+		if (prices[buy] < prices[sell]) {
+			let current_profit = prices[sell] - prices[buy]; // our current profit
 
-			max_profit = Math.max(max_profit, profit);
+			max_profit = Math.max(max_profit, current_profit);
 		} else {
-			// If R < L, move left pointer right
-			left = right;
+			// If R < L, move buy pointer to sell location
+			buy = sell;
 		}
-		right++;
+		sell++;
 	}
 	return max_profit;
 };
