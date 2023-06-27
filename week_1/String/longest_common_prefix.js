@@ -1,3 +1,7 @@
+/**
+ * @param {string[]} strs
+ * @return {string}
+ */
 const longestCommonPrefix = (arr) => {
 	let longest_common_prefix = "";
 	outer: for (j = 0; j < arr[0].length; j++) {
