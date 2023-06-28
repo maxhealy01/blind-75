@@ -2,15 +2,15 @@
  * @param {string[]} strs
  * @return {string}
  */
-const longestCommonPrefix = (arr) => {
+const longestCommonPrefix = (words) => {
 	let longest_common_prefix = "";
-	outer: for (j = 0; j < arr[0].length; j++) {
-		for (i = 1; i < arr.length; i++) {
-			if (arr[i][j] !== arr[0][j]) {
+	outer: for (letter = 0; letter < words[0].length; letter++) {
+		for (word = 1; word < words.length; word++) {
+			if (words[word][letter] !== words[0][letter]) {
 				break outer;
 			}
 		}
-		longest_common_prefix = arr[0].slice(0, j + 1);
+		longest_common_prefix = words[0].slice(0, letter + 1);
 	}
 	return longest_common_prefix;
 };
