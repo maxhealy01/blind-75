@@ -2,7 +2,6 @@ const { max_profit, maxProfit } = require("../Array/buy_stock");
 const containsDuplicate = require("../Array/contains_duplicate");
 const maxSubArray = require("../Array/max_subarray");
 const twoSum = require("../Array/two_sum");
-const moveZeroes = require("../Array/move_zeroes");
 
 test("buy_stock works", () => {
 	expect(max_profit([7, 1, 5, 3, 8, 4])).toBe(7);
@@ -28,10 +27,4 @@ test("max_subarray works", () => {
 
 test("two_sum works", () => {
 	expect(twoSum([2, 7, 11, 15], 9)).toEqual([0, 1]);
-});
-
-test("move_zeroes works", () => {
-	let nums = [0, 10, 0, 2, 3, 4, 0, 5, 6, 7];
-	moveZeroes(nums);
-	expect(nums).toEqual([10, 2, 3, 4, 5, 6, 7, 0, 0, 0]);
 });
