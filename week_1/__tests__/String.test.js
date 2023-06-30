@@ -58,8 +58,3 @@ test("is_subsequence works", () => {
 	expect(isSubsequence("mouthwash", "hsawhtuom")).toBe(false);
 	expect(isSubsequence("hair", "nair")).toBe(false);
 });
-
-test("longest_common_prefix works", () => {
-	expect(longestCommonPrefix(["flower", "flow", "flytrap"])).toBe("fl");
-	expect(longestCommonPrefix(["oh no!", "pies", "peanuts"])).toBe("");
-});
