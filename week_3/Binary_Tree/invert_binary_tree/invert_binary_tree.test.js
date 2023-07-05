@@ -1,7 +1,7 @@
 const invertTree = require("./invert_binary_tree");
 const BinarySearchTree = require("../class");
 
-test("invert_binary_tree works", () => {
+test("invert_binary_tree accurately inverts the given binary tree", () => {
 	let bst = new BinarySearchTree();
 	bst.insert(10);
 	bst.insert(15);
