@@ -5,32 +5,32 @@
 
 // Warning: This algorithm mutates the input array.
 /**
- * @param {number[]} nums
- * @return {void} Do not return anything, modify nums in-place instead.
+ * @param {number[]} colors
+ * @return {void} Do not return anything, modify colors in-place instead.
  */
-const sortColors = (nums) => {
+const sortColors = (colors) => {
 	let low = 0;
 	let current = 0;
-	let high = nums.length - 1;
+	let high = colors.length - 1;
 
 	while (current <= high) {
 		// This swap ensures that every value whose index < low is equal to 0
-		if (nums[current] == 0) {
-			swap(low, current);
+		if (colors[current] == 0) {
+			if (low !== current) {
+				[colors[low], colors[current]] = [colors[current], colors[low]];
+			}
 			low++;
 			current++;
 		}
 		// This swap ensures that every value whose index > high is equal to 2
-		else if (nums[current] == 2) {
-			swap(current, high);
+		else if (colors[current] == 2) {
+			if (high !== current) {
+				[colors[high], colors[current]] = [colors[current], colors[high]];
+			}
 			high--;
 		} else {
 			current++;
 		}
-	}
-
-	function swap(a, b) {
-		[nums[a], nums[b]] = [nums[b], nums[a]];
 	}
 };
 
