@@ -15,24 +15,24 @@ class BinarySearchTree {
 			this.root = newNode;
 			return this;
 		}
-		let comp = this.root;
+		let current = this.root;
 		while (true) {
-			if (val === comp.val) return undefined;
-			if (comp.val < val) {
-				if (!comp.right) {
-					comp.right = newNode;
+			if (val === current.val) return undefined;
+			if (current.val < val) {
+				if (!current.right) {
+					current.right = newNode;
 					return this;
 				}
-				comp = comp.right;
+				current = current.right;
 			} else {
-				if (!comp.left) {
-					comp.left = newNode;
+				if (!current.left) {
+					current.left = newNode;
 					return this;
 				}
-				comp = comp.left;
+				current = current.left;
 			}
 		}
 	}
 }
 
-module.exports = BinarySearchTree;
+module.exports = { BinarySearchTree, Node };
