@@ -7,24 +7,30 @@
  */
 
 const productExceptSelf = (nums) => {
+	// Instantiate arrays to gather multipliers
 	const fromLeft = [];
-	let leftMultiplier = 1;
-
-	// This loop creates an array where each index is equal to the product of all nums to the left of nums[i]
-	for (let i = 0; i < nums.length; i++) {
-		fromLeft[i] = leftMultiplier;
-		leftMultiplier *= nums[i];
-	}
-
 	const fromRight = [];
+
+	let leftMultiplier = 1;
 	let rightMultiplier = 1;
 
+	// Gather multipliers in one pass
+	let right = nums.length - 1;
+	let left = 0;
+	while (left < nums.length) {
+		fromLeft[left] = leftMultiplier;
+		leftMultiplier *= nums[left];
+
+		fromRight[right] = rightMultiplier;
+		rightMultiplier *= nums[right];
+
+		right--;
+		left++;
+	}
+
 	const products = [];
-	// This loop creates an array where each index is equal to the product of all nums to the right of nums[i]
-	// We then multiply that index by the same index of fromLeft in order to get the product of all nums to the right and left of nums[i]
-	for (let i = nums.length - 1; i >= 0; i--) {
-		fromRight[i] = rightMultiplier;
-		rightMultiplier *= nums[i];
+	// Multiple all numbers to the left and right of a given index, then store that value in a new array
+	for (let i = 0; i < nums.length; i++) {
 		products[i] = fromRight[i] * fromLeft[i];
 	}
 
