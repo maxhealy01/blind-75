@@ -1,9 +1,8 @@
+// Given a roman numeral, convert it to an integer.
 /**
- * @param {string} s
+ * @param {string} str
  * @return {number}
  */
-
-// Given a roman numeral, convert it to an integer.
 const symbols = {
 	I: 1,
 	V: 5,
@@ -17,11 +16,9 @@ const symbols = {
 const romanToInt = (str) => {
 	let sum = 0;
 	for (i = 0; i < str.length; i++) {
-		// If the current symbol is less than the one that follows,
-		// that means it's negative and should be substracted
+		// If current symbol is less than the one that follows, it's negative and should be substracted
 		if (symbols[str[i]] < symbols[str[i + 1]]) {
 			sum -= symbols[str[i]];
-			// otherwise, add it
 		} else {
 			sum += symbols[str[i]];
 		}

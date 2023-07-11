@@ -1,17 +1,19 @@
-// /**
-//  * @param {string} s
-//  * @return {boolean}
-//  */
+// This function accepts a string and determines whether it's a valid arrangement of parentheses, brackets and curly braces
+// An input string is valid if:
 
-// // This function accepts a string and determines whether it's
-// // a valid arrangement of parentheses, brackets and curly braces
+// Open brackets must be closed by the same type of brackets.
+// Open brackets must be closed in the correct order.
+// Every close bracket has a corresponding open bracket of the same type.
+/**
+ * @param {string} str
+ * @return {boolean}
+ */
 const isValidParentheses = (str) => {
 	const stack = [];
 
 	for (let i = 0; i < str.length; i++) {
-		let char = str.charAt(i);
+		const char = str.charAt(i);
 		// We're building a mirror structure, so '({[' will create a stack of ']})'
-		// which will then be validated in the default case.
 		switch (char) {
 			case "(":
 				stack.push(")");

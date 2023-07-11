@@ -1,4 +1,9 @@
 // Given two strings, return true if they consist of the same characters and false otherwise.
+/**
+ * @param {string} first
+ * @param {string} second
+ * @return {boolean}
+ */
 const isAnagram = (first, second) => {
 	if (first.length !== second.length) return false;
 	const map = {};
