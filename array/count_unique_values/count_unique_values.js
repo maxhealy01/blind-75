@@ -6,7 +6,7 @@
 const countUniqueValues = (arr) => {
   const set = new Set(arr)
 
-	return set.size;
-};
+  return set.size
+}
 
-module.exports = countUniqueValues;
+module.exports = countUniqueValues
