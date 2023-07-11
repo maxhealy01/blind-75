@@ -5,16 +5,16 @@
  * @return {boolean}
  */
 const isPalindrome = (str) => {
-	// Eliminate non-alphanumeric chars
-	str = str.replace(/[^a-z0-9]/gi, "").toLowerCase();
+  // Eliminate non-alphanumeric chars
+  str = str.replace(/[^a-z0-9]/gi, "").toLowerCase()
 
-	for (i = 0; i < Math.floor(str.length / 2); i++) {
-		if (str[i] !== str[str.length - 1 - i]) {
-			return false;
-		}
-	}
+  for (i = 0; i < Math.floor(str.length / 2); i++) {
+    if (str[i] !== str[str.length - 1 - i]) {
+      return false
+    }
+  }
 
-	return true;
-};
+  return true
+}
 
-module.exports = isPalindrome;
+module.exports = isPalindrome

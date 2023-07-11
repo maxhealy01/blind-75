@@ -6,21 +6,21 @@
  * @return {number}
  */
 const majorityElement = (arr) => {
-	const map = {};
+  const map = {}
 
-	let solution = arr[0];
-	arr.forEach((item) => {
-		if (map[item]) {
-			map[item]++;
-		} else {
-			map[item] = 1;
-		}
-		if (map[item] > arr.length / 2) {
-			solution = item;
-		}
-	});
+  let solution = arr[0]
+  arr.forEach((item) => {
+    if (map[item]) {
+      map[item]++
+    } else {
+      map[item] = 1
+    }
+    if (map[item] > arr.length / 2) {
+      solution = item
+    }
+  })
 
-	return solution;
-};
+  return solution
+}
 
-module.exports = majorityElement;
+module.exports = majorityElement

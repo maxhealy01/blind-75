@@ -4,9 +4,9 @@
  * @return {number} the number of unique values
  */
 const countUniqueValues = (arr) => {
-	const set = new Set(arr);
+  const set = new Set(arr)
 
-	return set.size;
-};
+  return set.size
+}
 
-module.exports = countUniqueValues;
+module.exports = countUniqueValues
