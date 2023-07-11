@@ -3,6 +3,11 @@
 		"jest": "^29.5.0"
 	},
 	"scripts": {
-		"test": "jest"
+		"test": "jest",
+		"fix": "npm format && npm eslint fix"
+	},
+	"dependencies": {
+		"eslint": "^8.44.0",
+		"prettier": "^3.0.0"
 	}
 }
