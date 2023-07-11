@@ -8,5 +8,5 @@ const countUniqueValues = (arr) => {
 
 	return set.size;
 };
-console.log(countUniqueValues([]));
+
 module.exports = countUniqueValues;
