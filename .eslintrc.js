@@ -22,6 +22,8 @@ module.exports = {
   rules: {
     "no-undef": 0,
     "no-tabs": ["error", { allowIndentationTabs: true }],
-    quotes: [2, "double"]
+    quotes: [2, "double"],
+    "no-labels": ["error", { allowLoop: true }],
+    "no-unmodified-loop-condition": 0
   }
 }

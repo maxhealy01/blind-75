@@ -11,7 +11,7 @@ const longestPalindrome = (str) => {
 
   for (const char of str) {
     keys[char] ? keys[char]++ : (keys[char] = 1)
-    if (keys[char] % 2 == 0) answer += 2
+    if (keys[char] % 2 === 0) answer += 2
   }
   // The only time this would be true is if the map contains an odd #
   // Therefore, add the middle value if so
