@@ -4,14 +4,14 @@
  * @return {number}
  */
 const lengthOfLongestSubstring = (s) => {
-	if (s.length === 0 || s.length === 1) return s.length;
+	if (s.length < 2) return s.length;
 
 	let start = 0;
 	let longest = 1;
-	let lastSeen = new Map();
+	const lastSeen = new Map();
 
 	for (let end = 0; end < s.length; end++) {
-		let currentLetter = s[end];
+		const currentLetter = s[end];
 
 		// If the current letter has previously been seen, move the start index up to one letter ahead of the last seen index
 		if (lastSeen.has(currentLetter) && lastSeen.get(currentLetter) >= start) {
@@ -19,7 +19,7 @@ const lengthOfLongestSubstring = (s) => {
 		}
 
 		// We add 1 to length because end - start is the distance between those values and doesn't include the current value
-		let currentLength = end - start + 1;
+		const currentLength = end - start + 1;
 		// We then compare the currentLength with the longest recorded length so far
 		longest = Math.max(longest, currentLength);
 
