@@ -6,7 +6,7 @@
 const countUniqueValues = (arr) => {
   const set = new Set(arr)
 
-  return set.size
-}
-console.log(countUniqueValues([]))
-module.exports = countUniqueValues
+	return set.size;
+};
+
+module.exports = countUniqueValues;
