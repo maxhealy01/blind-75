@@ -9,6 +9,4 @@ const containsDuplicate = (arr) => {
 	return set.size !== arr.length;
 };
 
-console.log(containsDuplicate([2, 3, 6, 8, 1, 2]));
-
 module.exports = containsDuplicate;
