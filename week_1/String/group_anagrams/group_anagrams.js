@@ -7,7 +7,7 @@ const groupAnagrams = (strs) => {
 
 	strs.forEach((str) => {
 		// Sort the strings alphabetically
-		let key = str.split("").sort().join("");
+		const sortedString = word.split("").sort().join("");
 		if (groups[key]) {
 			groups[key].push(str);
 		} else {
