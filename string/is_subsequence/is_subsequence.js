@@ -5,19 +5,19 @@
  * @return {boolean}
  */
 const isSubsequence = (first, second) => {
-	// Create a pointer for the first string
-	let p1 = 0;
+  // Create a pointer for the first string
+  let p1 = 0
 
-	for (let p2 = 0; p2 < second.length; p2++) {
-		if (first[p1] === second[p2]) {
-			p1++;
-		}
-		if (p1 === first.length) {
-			return true;
-		}
-	}
+  for (let p2 = 0; p2 < second.length; p2++) {
+    if (first[p1] === second[p2]) {
+      p1++
+    }
+    if (p1 === first.length) {
+      return true
+    }
+  }
 
-	return false;
-};
+  return false
+}
 
-module.exports = isSubsequence;
+module.exports = isSubsequence

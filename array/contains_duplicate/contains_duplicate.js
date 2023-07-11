@@ -4,11 +4,11 @@
  * @return {boolean}
  */
 const containsDuplicate = (arr) => {
-	const set = new Set(arr);
+  const set = new Set(arr)
 
-	return set.size !== arr.length;
-};
+  return set.size !== arr.length
+}
 
-console.log(containsDuplicate([2, 3, 6, 8, 1, 2]));
+console.log(containsDuplicate([2, 3, 6, 8, 1, 2]))
 
-module.exports = containsDuplicate;
+module.exports = containsDuplicate

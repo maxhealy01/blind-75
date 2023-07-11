@@ -5,20 +5,20 @@
  * @return {boolean}
  */
 const canConstruct = (ransomNote, magazine) => {
-	if (magazine.length < ransomNote.length) return false;
+  if (magazine.length < ransomNote.length) return false
 
-	const map = {};
+  const map = {}
 
-	for (char of magazine) {
-		map[char] ? map[char]++ : (map[char] = 1);
-	}
+  for (char of magazine) {
+    map[char] ? map[char]++ : (map[char] = 1)
+  }
 
-	for (char of ransomNote) {
-		if (map[char] > 0) map[char]--;
-		else return false;
-	}
+  for (char of ransomNote) {
+    if (map[char] > 0) map[char]--
+    else return false
+  }
 
-	return true;
-};
+  return true
+}
 
-module.exports = canConstruct;
+module.exports = canConstruct
